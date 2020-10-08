@@ -24,9 +24,8 @@ nav{
 	grid-area: nav;
 }
 main{
-
 	grid-area: main;
-	color: blue;
+	color: black;
 }
 footer{
 	font-size: 15px;
@@ -54,4 +53,27 @@ ul li a{
 }
 ul li a:hover{
 	background-color: yellow;
+}
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 20px
+}
+table{
+	text-align: center;
+	margin: auto;
+	width: 800px
+}
+tr:nth-child(n+3){
+	background-color: yellow;
+}
+tr:nth-child(even){
+		background-color: orange;
+}
+th{
+	background-color: white;
+}
+img{
+	height: 100px;
+	width: 100px;
 }
