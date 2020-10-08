@@ -88,7 +88,7 @@ tr:nth-child(3){
 }
 /* tr anropas, varje jämn tabellrad ska vara orange bakgrundsfärg,*/
 tr:nth-child(even){
-		background-color: orange;
+	background-color: orange;
 }
 /* varje tableheader ska vara vit bakgrundsfärg */
 th{
