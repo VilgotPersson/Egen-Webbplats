@@ -10,31 +10,35 @@
 		<title>Huvudsida</title>
 		<!-- Länken till CSS -->
 		<link href="style.css" rel="stylesheet">
+	<!-- headtaggens sluttagg, alla taggar med / framför är sluttagg -->
 	</head>
-	<!-- Allting som syns på sidan -->
+	<!-- Allting som syns på sidan. class="container" menas att vi ska ha den klassselektorn för hela bodyn eftersom den ligger i body taggen -->
 	<body class="container">
 		<!-- header används för semantik-->
 		<header>
-			<!-- h1 är huvudrubriken (används bara en gång per sida)-->
+			<!-- h1 är huvudrubriken (används bara en gång per sida) -->
 			<h1>Sporter</h1>
 		</header>		
-		<!-- main används för semantik -->
 		<!-- nav används för semnatik för navigationsmenyer-->
 		<nav>
 			<!-- "Unorderded list, Punktlista-->
 			<ul>
 				<!-- List item, punkter på listan-->
-				<!-- <a> används för att länka andra sidor -->
+				<!-- <a> används för att länka andra sidor, både externa men som i detta fallet interna -->
 				<li><a href="index.html">Startsida</a></li>
 				<li><a href="amerikansk.html">Amerikansk Fotboll</a></li>
 				<li><a href="fotboll.html">Fotboll</a></li>
 			</ul>
 		</nav>
+		<!-- main används för semantik -->
 		<main>
-		<p>Det här är en sida om de sporter som jag följer dagligen. Tryck på menyn för att gå vidare.</p>
+			<!-- p används för text (paragraph) -->
+			<p>Det här är en sida om de sporter som jag följer dagligen. Tryck på menyn för att gå vidare.</p>
 		</main>
+		<!-- footer används för semantik -->
 		<footer>
 			<p>Vilgot Persson, Te19c</p>
 		</footer>
+		<!-- Allt som har med semantik och göra har jag använt tilsammans med grid för att göra en layout -->
 	</body>
 </html>

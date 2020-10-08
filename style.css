@@ -1,48 +1,63 @@
+/* *betyder att allting berörs, padding och margin är förinställda mellanrum hos webbläsaren som man tar bort genom att skriva såhär */
 *{
 	padding: 0;
 	margin: 0;
 }
+/* en punkt före en tag gör en klasselektor som man bara kan anropa genom att skriva class="det som står efter punkten" */
 .container{
+	/* display: grid; betyder att griden ska finnas */
 	display: grid;
-	grid-temlplate-columns: 1fr 1fr 1fr;
+	/* detta betyder att vi gör 3st kolumner med 1/3 var (i vår grid) */
+	grid-template-columns: 1fr 1fr 1fr;
+	/* Här gör vi 4 rader med olika storlek för att passa så som vi vill ha det */
 	grid-template-rows: 1fr 100px 7fr 20px;
+	/* nu namnger vi alla boxar som vi har skapat */
 	grid-template-areas:
 	"header header header"
 	"nav nav nav"
 	"main main main"
 	"footer footer footer";
 }
+/* här så ger vi header, grid-arean header så att vi kan anropa det från html dokumentet och css dokumentet, vi ger även alla headers svart bakgrundsfärg och all text ska vara centrerad i headern */
 header{
 	background-color: black;
 	grid-area: header;
 	text-align: center;
 }
-nav, main{
-	background-color: grey;
-}
+/* här så ger vi nav, grid-arean nav så att vi kan anropa den från html dokumentet och css dokumentet */
 nav{
 	grid-area: nav;
 }
+/* här så ger vi main, grid-arean main så att vi kan anropa den från html dokumentet och css dokumentet, vi ger även all text i main svart färg */
 main{
 	grid-area: main;
 	color: black;
 }
+/* här så ger vi footer, grid-arean footer så att vi kan anropa den från html dokumentet och css dokumentet, vi ger även all text en viss storlek och att de ska vara centrerade. Till sist så lägger vi dit en ram runt footern */
 footer{
 	font-size: 15px;
 	border: 1px solid black;
 	text-align: center;
 	grid-area: footer;
 }
+
+/* nav och main ska ha bakgrundsfärgen grå */
+nav, main{
+	background-color: grey;
+}
+/* alla ul ska inte ha någon list-styling såsom punkter eller kvadrater vid sidan om, vi gör även en till grid inom ul med en rad och tre lika stora kolumner */
 ul{
 	list-style-type: none;
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
 }
+/* all text i h1 ska vara 80px font size och ska ha färgen vit */
 h1{
 	font-size: 80px;
 	color: white;
 }
+/* en a tag i en li tag i en ul tag: texten ska vara centrerad, ingen text decoration(bland annat streck under länken), texten ska vara grön fonten ska vara 40px stor, sen gör vi ett block som är 100px högt för att göra mer än bara texten klickbar*/
 ul li a{
 	text-align: center;
 	text-decoration: none;
@@ -51,28 +66,35 @@ ul li a{
 	display: block;
 	line-height: 100px;
 }
+/* när man håller över en a tag i en li tag i en ul tag så ska bakgrundsfärgen vara gul */
 ul li a:hover{
 	background-color: yellow;
 }
+/* här anropar vi table, th och td, alla ska ha en ram runt sig som är 1px hel svart, Border collapse används för att bara få ett streck där det skulle ha varit 2 eller 3, font size bestämmer storleken på texten */
 table, th, td{
 	border: 1px solid black;
 	border-collapse: collapse;
 	font-size: 20px
 }
+/* table anropas, all text i tabeln ska vara centrerad, margin auto används för att den ska vara centrerad på sidan, width används för att bestämma bredden på tabellen */
 table{
 	text-align: center;
 	margin: auto;
 	width: 800px
 }
-tr:nth-child(n+3){
+/* tr anropas, den 3:e tabellraden ska vara gul bakgrundsfärg*/
+tr:nth-child(3){
 	background-color: yellow;
 }
+/* tr anropas, varje jämn tabellrad ska vara orange bakgrundsfärg,*/
 tr:nth-child(even){
 		background-color: orange;
 }
+/* varje tableheader ska vara vit bakgrundsfärg */
 th{
 	background-color: white;
 }
+/* img anropas, bestämmer bildens höjd och bredd */
 img{
 	height: 100px;
 	width: 100px;
